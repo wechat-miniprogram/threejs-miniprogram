@@ -112,9 +112,7 @@ export default class XMLHttpRequest extends EventTarget {
                 if (typeof data !== 'string' && !(data instanceof ArrayBuffer)) {
                     try {
                         data = JSON.stringify(data)
-                    } catch (e) {
-                        data = data
-                    }
+                    } catch (e) {}
                 }
 
                 this.status = statusCode

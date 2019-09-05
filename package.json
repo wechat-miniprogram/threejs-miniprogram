@@ -1,14 +1,12 @@
 {
-  "name": "miniprogram-threejs",
+  "name": "threejs-miniprogram",
   "version": "0.0.1",
-  "description": "ThreeJS adapted for WeChat MiniProgram",
+  "description": "ThreeJS adapter for WeChat MiniProgram",
   "main": "dist/index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "dev": "webpack --config build/webpack.config.js --watch",
-    "build": "webpack --hide-modules --config build/webpack.config.js"
+    "build": "webpack --hide-modules --config build/webpack.config.js",
+    "lint": "eslint \"src/**/*.js\""
   },
   "miniprogram": "dist/",
   "author": "wechat-miniprogram",
@@ -18,7 +16,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
-    "eslint": "^3.4.0",
+    "eslint": "^3.19.0",
     "eslint-friendly-formatter": "^2.0.6",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-jest": "^20.0.3",
@@ -27,6 +25,7 @@
     "path": "^0.12.7",
     "string-replace-loader": "^2.2.0",
     "string-replace-webpack-plugin": "^0.1.3",
+    "three": "^0.108.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }

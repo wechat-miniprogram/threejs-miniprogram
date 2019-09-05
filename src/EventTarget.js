@@ -28,7 +28,7 @@ export default class EventTarget {
         }
     }
 
-    removeEventListener(type, listener, options = {}) {
+    removeEventListener(type, listener) {
         const events = _events.get(this)
 
         if (events) {
