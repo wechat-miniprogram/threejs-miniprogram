@@ -1,6 +1,6 @@
 {
   "name": "threejs-miniprogram",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ThreeJS adapter for WeChat MiniProgram",
   "main": "dist/index.js",
   "scripts": {
