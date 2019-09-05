@@ -10,6 +10,7 @@ Three.js 小程序 WebGL 的适配版本。
    ```
    npm install --save threejs-miniprogram
    ```
+安装完成之后在微信开发者工具中点击构建 npm。
 
 2. 导入小程序适配版本的 Three.js
 
