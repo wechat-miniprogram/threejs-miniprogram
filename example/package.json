@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "threejs-miniprogram": "0.0.2"
+    "threejs-miniprogram": "0.0.3"
   }
 }
