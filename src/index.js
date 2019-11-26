@@ -18,7 +18,8 @@ export function createScopedThreejs(canvas) {
   const window = {
     AudioContext: function() {},
     addEventListener: function() {},
-    removeEventListener: function() {}
+    removeEventListener: function() {},
+    URL: {},
   }
   // eslint-disable-next-line
   const XMLHttpRequest = _XMLHttpRequest
