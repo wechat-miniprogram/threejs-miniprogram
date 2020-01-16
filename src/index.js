@@ -1,3 +1,4 @@
+import {atob as _atob} from 'abab';
 import _XMLHttpRequest from './XMLHttpRequest'
 
 export function createScopedThreejs(canvas) {
@@ -21,6 +22,12 @@ export function createScopedThreejs(canvas) {
     removeEventListener: function() {},
     URL: {},
   }
+
+  // eslint-disable-next-line
+  const atob = (a) => {
+    return _atob(a)
+  }
+
   // eslint-disable-next-line
   const XMLHttpRequest = _XMLHttpRequest
 

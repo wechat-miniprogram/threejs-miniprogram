@@ -28,5 +28,8 @@
     "three": "^0.108.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "abab": "^2.0.3"
   }
 }
