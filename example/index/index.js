@@ -18,9 +18,6 @@ Page({
         const canvas = res[0].node
         this.canvas = canvas
         const THREE = createScopedThreejs(canvas)
-        canvas.addEventListener('touchmove', (e) => console.warn('move ~', e))
-        canvas.addEventListener('touchstart', (e) => console.warn('start ~', e))
-        canvas.addEventListener('touchend', (e) => console.warn('end ~', e))
         
         // renderSphere(canvas, THREE)
         // renderCube(canvas, THREE)
@@ -29,12 +26,12 @@ Page({
       })
   },
   touchStart(e) {
-    this.canvas.dispatchEvent({...e, type:'touchstart'})
+    this.canvas.dispatchTouchEvent({...e, type:'touchstart'})
   },
   touchMove(e) {
-    this.canvas.dispatchEvent({...e, type:'touchmove'})
+    this.canvas.dispatchTouchEvent({...e, type:'touchmove'})
   },
   touchEnd(e) {
-    this.canvas.dispatchEvent({...e, type:'touchend'})
+    this.canvas.dispatchTouchEvent({...e, type:'touchend'})
   }
 })
