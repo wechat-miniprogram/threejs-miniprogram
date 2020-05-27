@@ -27,10 +27,10 @@
     "string-replace-webpack-plugin": "^0.1.3",
     "three": "^0.108.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "babel-eslint": "^10.1.0"
   },
   "dependencies": {
-    "abab": "^2.0.3",
-    "babel-eslint": "^10.1.0"
+    "abab": "^2.0.3"
   }
 }
