@@ -1,10 +1,11 @@
 import { registerGLTFLoader } from '../loaders/gltf-loader'
+import registerOrbit from "./orbit"
 
 export function renderModel(canvas, THREE) {
   registerGLTFLoader(THREE)
 
   var container, stats, clock, gui, mixer, actions, activeAction, previousAction;
-  var camera, scene, renderer, model, face;
+  var camera, scene, renderer, model, face, controls;
   var api = { state: 'Walking' };
   init();
   animate();
@@ -45,6 +46,12 @@ export function renderModel(canvas, THREE) {
     renderer.setSize(canvas.width, canvas.height);
     renderer.gammaOutput = true;
     renderer.gammaFactor = 2.2;
+
+    const { OrbitControls } = registerOrbit(THREE)
+    controls = new OrbitControls( camera, renderer.domElement );
+
+    camera.position.set( 5, 5, 10 );
+    controls.update();
   }
 
   function createGUI(model, animations) {
@@ -81,11 +88,11 @@ export function renderModel(canvas, THREE) {
       .fadeIn(duration)
       .play();
   }
-
   function animate() {
     var dt = clock.getDelta();
     if (mixer) mixer.update(dt);
     canvas.requestAnimationFrame(animate);
+    controls.update()
     renderer.render(scene, camera);
   }
 }

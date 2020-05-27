@@ -16,6 +16,7 @@ Page({
       .node()
       .exec((res) => {
         const canvas = res[0].node
+        this.canvas = canvas
         const THREE = createScopedThreejs(canvas)
         
         // renderSphere(canvas, THREE)
@@ -24,4 +25,13 @@ Page({
         renderModel(canvas, THREE)
       })
   },
+  touchStart(e) {
+    this.canvas.dispatchTouchEvent({...e, type:'touchstart'})
+  },
+  touchMove(e) {
+    this.canvas.dispatchTouchEvent({...e, type:'touchmove'})
+  },
+  touchEnd(e) {
+    this.canvas.dispatchTouchEvent({...e, type:'touchend'})
+  }
 })
