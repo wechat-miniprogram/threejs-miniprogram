@@ -93,7 +93,6 @@ export function renderModel(canvas, THREE) {
     if (mixer) mixer.update(dt);
     canvas.requestAnimationFrame(animate);
     controls.update()
-    console.log(controls.object)
     renderer.render(scene, camera);
   }
 }

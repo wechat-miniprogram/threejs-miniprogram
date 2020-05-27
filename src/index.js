@@ -5,9 +5,31 @@ import EventTarget from "./EventTarget"
 
 export function createScopedThreejs(canvas) {
   // adapt canvas
-  canvas.style = {width: canvas.width + 'px', height: canvas.height + 'px'}
-  canvas.clientHeight = canvas.height
-  canvas.clientWidth = canvas.width
+  // canvas.style = {width: canvas.width + 'px', height: canvas.height + 'px'}
+  // canvas.clientHeight = canvas.height
+  // canvas.clientWidth = canvas.width
+
+  Object.defineProperty(canvas, 'style', {
+    get() {
+      return {
+        width: this.width + 'px',
+        height: this.height + 'px'
+      }
+    }
+  })
+
+  Object.defineProperty(canvas, 'clientHeight', {
+    get() {
+      return this.height
+    }
+  })
+
+  Object.defineProperty(canvas, 'clientWidth', {
+    get() {
+      return this.width
+    }
+  })
+
   copyProperties(canvas.constructor.prototype, EventTarget.prototype)
 
   // eslint-disable-next-line

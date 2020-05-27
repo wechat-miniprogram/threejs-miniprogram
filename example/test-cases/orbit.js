@@ -700,7 +700,6 @@ const registerOrbit = (THREE) => {
 			rotateDelta.subVectors(rotateEnd, rotateStart).multiplyScalar(scope.rotateSpeed);
 
 			var element = scope.domElement;
-			console.log(element)
 
 			rotateLeft(2 * Math.PI * rotateDelta.x / element.clientHeight); // yes, height
 
@@ -1058,9 +1057,7 @@ const registerOrbit = (THREE) => {
 					if (scope.enableRotate === false) return;
 
 					handleTouchMoveRotate(event);
-					console.warn(11, scope)
 					scope.update();
-					console.warn(12, scope)
 
 					break;
 
