@@ -22,8 +22,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wxda2a1cb48a786901",
-	"projectname": "three.js-demo",
+	"appid": "wx1dbf2281ce5d62ac",
+	"projectname": "example",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
