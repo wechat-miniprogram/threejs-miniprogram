@@ -1,4 +1,4 @@
-const _events = new Map()
+const _events = new WeakMap()
 
 class Touch {
     constructor(touch) {
