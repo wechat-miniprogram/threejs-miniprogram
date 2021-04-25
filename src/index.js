@@ -59,7 +59,7 @@ export function createScopedThreejs(canvas) {
   const exports = {};
 
   // eslint-disable-next-line
-  const HTMLCanvasElement = undefined
+  const HTMLCanvasElement = undefined;
 
   // three.js source code will be injected here
   // eslint-disable-next-line
