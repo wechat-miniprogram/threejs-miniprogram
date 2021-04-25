@@ -6,11 +6,14 @@ class Touch {
         // Touch{identifier, pageX, pageY, clientX, clientY, force}
         this.identifier = touch.identifier
 
+        const doubleQuestionFunc = (valueA, valueB) =>
+            valueA !== null && valueA !== void 0 ? valueA : valueB;
         this.force = touch.force === undefined ? 1 : touch.force
-        this.pageX = touch.pageX || touch.x
-        this.pageY = touch.pageY || touch.y
-        this.clientX = touch.clientX || touch.x
-        this.clientY = touch.clientY || touch.y
+        
+        this.pageX = doubleQuestionFunc(touch.pageX, touch.x);
+        this.pageY = doubleQuestionFunc(touch.pageY, touch.y);
+        this.clientX = doubleQuestionFunc(touch.clientX, touch.x);
+        this.clientY = doubleQuestionFunc(touch.clientY, touch.y);
 
         this.screenX = this.pageX
         this.screenY = this.pageY
