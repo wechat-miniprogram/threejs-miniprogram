@@ -1,20 +1,30 @@
 {
   "name": "threejs-miniprogram",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ThreeJS adapter for WeChat MiniProgram",
   "main": "dist/index.js",
   "scripts": {
     "dev": "webpack --config build/webpack.config.js --watch",
     "build": "webpack --hide-modules --config build/webpack.config.js",
-    "lint": "eslint \"src/**/*.js\""
+    "lint": "eslint \"src/**/*.js\"",
+    "prepublishOnly": "npm run build"
   },
   "miniprogram": "dist/",
   "author": "wechat-miniprogram",
   "license": "MIT",
+  "homepage": "https://github.com/wechat-miniprogram/threejs-miniprogram",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wechat-miniprogram/threejs-miniprogram"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "abab": "^2.0.3",
     "babel-loader": "^8.0.6",
     "eslint": "^4.18.2",
     "eslint-friendly-formatter": "^2.0.6",
@@ -25,12 +35,9 @@
     "path": "^0.12.7",
     "string-replace-loader": "^2.2.0",
     "string-replace-webpack-plugin": "^0.1.3",
-    "three": "^0.108.0",
+    "three": "0.108.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "babel-eslint": "^10.1.0"
-  },
-  "dependencies": {
-    "abab": "^2.0.3"
   }
 }
